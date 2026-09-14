@@ -21,7 +21,7 @@
 
       <ul class="work-list" aria-label="Список ремонтных работ">
         <li>
-          <a class="work-card" href="#" data-work-card data-coming-soon data-title="Сделать потолок">
+          <a class="work-card" href="#ceiling-options" data-work-card data-open-ceiling-menu data-title="Сделать потолок" aria-haspopup="dialog">
             <img class="work-card__image" src="Ремонт/pictures/Работы/01-ceiling.png" alt="" />
             <span class="work-card__title">Сделать потолок</span>
             <img class="work-card__chevron" src="assets/icons/chevron.svg" alt="" />
@@ -63,7 +63,7 @@
           </a>
         </li>
         <li>
-          <a class="work-card" href="lesson-1.html" data-work-card data-title="Установить розетки">
+          <a class="work-card" href="rozetki1.html" data-work-card data-title="Установить розетки">
             <img class="work-card__image" src="Ремонт/pictures/Работы/07-sockets.png" alt="" />
             <span class="work-card__title">Установить розетки</span>
             <img class="work-card__chevron" src="assets/icons/chevron.svg" alt="" />
@@ -87,6 +87,33 @@
 
       <p class="empty-state" data-empty-state>Ничего не найдено</p>
     </main>
+    <div class="choice-dialog" data-ceiling-dialog hidden>
+      <section class="choice-dialog__sheet" role="dialog" aria-modal="true" aria-labelledby="ceiling-dialog-title">
+        <header class="choice-dialog__header">
+          <div>
+            <h2 id="ceiling-dialog-title">Сделать потолок</h2>
+            <p>Выберите тип работы</p>
+          </div>
+          <button class="icon-button" type="button" data-close-ceiling-menu aria-label="Закрыть меню">
+            <img src="assets/icons/close.svg" alt="" />
+          </button>
+        </header>
+        <div class="choice-dialog__options">
+          <a class="choice-option" href="potolok_gipsokarton1.html">
+            <span><strong>Потолок из гипсокартона</strong><small>8 шагов</small></span>
+            <img src="assets/icons/chevron.svg" alt="" />
+          </a>
+          <button class="choice-option" type="button" data-coming-soon-option>
+            <span><strong>Система грильято</strong><small>Скоро</small></span>
+            <img src="assets/icons/chevron.svg" alt="" />
+          </button>
+          <button class="choice-option" type="button" data-coming-soon-option>
+            <span><strong>Простая окраска</strong><small>Скоро</small></span>
+            <img src="assets/icons/chevron.svg" alt="" />
+          </button>
+        </div>
+      </section>
+    </div>
     <div class="toast" role="status" aria-live="polite" data-toast>Инструкция скоро появится</div>
     <script src="js/app.js"></script>
   </body>
