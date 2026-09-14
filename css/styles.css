@@ -220,7 +220,16 @@ a {
 }
 
 .lesson-page {
-  align-items: center;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  align-items: stretch;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  gap: 16px;
+  padding-top: calc(20px + env(safe-area-inset-top));
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  overflow: hidden;
 }
 
 .lesson-header {
@@ -313,6 +322,25 @@ a {
   border-radius: 20px;
   object-fit: cover;
   background: #f7f7f7;
+  flex: 0 0 auto;
+}
+
+.lesson-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-height: 0;
+  padding: 0 2px 2px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lesson-body::-webkit-scrollbar {
+  display: none;
 }
 
 .lesson-content {
@@ -371,6 +399,9 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   width: 100%;
+  flex: 0 0 auto;
+  padding: 0 2px;
+  background: #fff;
 }
 
 .button {
