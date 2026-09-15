@@ -476,6 +476,7 @@ a {
 .lesson-content {
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
   gap: 20px;
   width: 100%;
   min-height: 98px;
@@ -492,13 +493,15 @@ a {
   color: var(--muted);
   font-size: 18px;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.08;
   letter-spacing: -0.36px;
+  overflow-wrap: anywhere;
 }
 
 .lesson-status {
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
   gap: 20px;
   width: 100%;
   min-height: 84px;
@@ -520,8 +523,9 @@ a {
 .lesson-status span {
   font-size: 18px;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.08;
   letter-spacing: -0.36px;
+  overflow-wrap: anywhere;
 }
 
 .lesson-actions {
